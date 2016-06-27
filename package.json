@@ -1,0 +1,15 @@
+{
+  "name": "backpack-ukulele-burritos",
+  "version": "0.0.1",
+  "description": "I dunno yet",
+  "main": "server.js",
+  "author": "Kass",
+  "dependencies": {
+    "express": "^4.13.4",
+    "fluxible": "^1.1.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {}
+}
