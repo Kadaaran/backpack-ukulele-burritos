@@ -8,7 +8,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   font-family: 'Lato';
 }
 
@@ -22,7 +23,8 @@ h6 {
 }
 
 .branding h1{
-  padding: 100px 0 500px;
+  margin: 0;
+  padding: 130px 0 500px;
   font-size: 4em;
   text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
   font-weight: 300;
@@ -45,7 +47,7 @@ header {
   align-items: flex-start;
   margin-bottom: 10px;
   padding-bottom: 15px;
-  background-color: rgba(0, 52, 96, 0.25);
+  background-color: rgba(0, 52, 64, 0.30);
 }
 
 header a {
@@ -53,6 +55,9 @@ header a {
   text-decoration: none;
   display: inline-block;
   color: white;
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+
 }
 
 header .nav {
@@ -73,4 +78,16 @@ header ul {
   align-items: flex-end;
   margin: 0;
   list-style-type: none;
+}
+
+#concept {
+  height: 500px;
+  width: 800px;
+  margin: 0;
+  margin: auto;
+}
+#concept h2{
+  color: #4e5c65;
+  font-size: 2.5em;
+  text-align: center;
 }
