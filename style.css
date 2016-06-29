@@ -9,7 +9,8 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+p {
   font-family: 'Lato';
 }
 
@@ -26,7 +27,7 @@ a {
   margin: 0;
   padding: 130px 0 500px;
   font-size: 4em;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
   font-weight: 300;
   color: white;
 }
@@ -82,12 +83,51 @@ header ul {
 
 #concept {
   height: 500px;
-  width: 800px;
-  margin: 0;
-  margin: auto;
 }
+
 #concept h2{
   color: #4e5c65;
   font-size: 2.5em;
   text-align: center;
+}
+.boxes-grid {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.icon {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.icon h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #4e5c65;
+}
+.icon img {
+  width: 183px;
+  color: #4e5c65;
+}
+
+.icon p {
+  text-align: center;
+  margin: 0 30px;
+  width: 314px;
+  line-height: 24px;
+}
+
+#about {
+  background-color: #f9f9f9;
+  height: 400px;
+}
+
+footer {
+  background-color: #4e5c65;
+  height: 200px;
 }
