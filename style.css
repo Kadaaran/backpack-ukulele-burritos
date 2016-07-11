@@ -23,11 +23,11 @@ p {
   background-position: 50% -40px;
 }
 
-.branding h1{
+.branding h1      {
   margin: 0;
   padding: 278px 0 591px;
   font-size: 4em;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
   font-weight: 300;
   color: white;
 }
@@ -35,7 +35,7 @@ p {
 .branding small {
   display: block;
   font-size: 1.3em;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
   font-weight: 300;
 }
 
@@ -53,7 +53,7 @@ header {
   align-items: flex-start;
   margin-bottom: 10px;
   padding-bottom: 15px;
-  background-color: rgba(0, 52, 64, 0.45);
+  background-color: rgba(0, 0, 0, 0.06);
   height: 50px;
 }
 
@@ -62,7 +62,7 @@ header a {
   text-decoration: none;
   display: inline-block;
   color: white;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
   font-weight: 300;
 
 }
@@ -127,6 +127,7 @@ header ul {
 }
 
 .icon p {
+  color: #4e5c65;
   text-align: center;
   margin: 0 30px;
   width: 314px;
@@ -136,11 +137,9 @@ header ul {
 }
 
 #about {
-  background-color: #f9f9f9;
-  height: 400px;
+  background-color: #282830;
 }
 
 footer {
   background-color: #4e5c65;
-  height: 200px;
 }
