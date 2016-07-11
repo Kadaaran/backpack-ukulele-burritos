@@ -7,9 +7,9 @@
   <br>
 </h1>
 
-<p align="center">Basically it's just a platform to organize your travel</p><br>
-<p align="center">For now, it's on fire and still in progress 🔥  </p><br>
-<p align="center">Come back later guys !</p>
+<p align="center">Basically it's just a platform to organize your travel</p>
+<p align="center">For now, it's on fire and still in progress 🔥  </p>
+<p align="center">Come back later guys !</p><br>
 
 ---
 
