@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="_x32_6_x5F_road_x5F_signpost"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="54px" height="64px"
+	 viewBox="0 0 54 64" style="enable-background:new 0 0 54 64;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<rect x="23" y="38" style="fill:#222829;" width="2" height="25"/>
+		</g>
+		<g>
+			<path style="fill:#222829;" d="M31,8h-2V4c0-1.103-0.897-2-2-2s-2,0.897-2,2v4h-2V4c0-2.206,1.794-4,4-4s4,1.794,4,4V8z"/>
+		</g>
+		<g>
+			<rect x="29" y="38" style="fill:#222829;" width="2" height="25"/>
+		</g>
+		<g>
+			<rect y="62" style="fill:#222829;" width="54" height="2"/>
+		</g>
+		<g>
+			<g>
+				<path style="fill:#222829;" d="M43,36H6c-0.265,0-0.52-0.105-0.707-0.293l-5-5c-0.391-0.391-0.391-1.023,0-1.414l5-5
+					C5.48,24.105,5.735,24,6,24h37c0.552,0,1,0.447,1,1v10C44,35.553,43.552,36,43,36z M6.414,34H42v-8H6.414l-4,4L6.414,34z"/>
+			</g>
+			<g>
+				<rect x="10" y="29" style="fill:#222829;" width="13" height="2"/>
+			</g>
+			<g>
+				<rect x="25" y="29" style="fill:#222829;" width="13" height="2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path style="fill:#222829;" d="M48,22H11c-0.552,0-1-0.447-1-1V11c0-0.553,0.448-1,1-1h37c0.265,0,0.52,0.105,0.707,0.293l5,5
+					c0.391,0.391,0.391,1.023,0,1.414l-5,5C48.52,21.895,48.265,22,48,22z M12,20h35.586l4-4l-4-4H12V20z"/>
+			</g>
+			<g>
+				<rect x="16" y="15" style="fill:#222829;" width="13" height="2"/>
+			</g>
+			<g>
+				<rect x="31" y="15" style="fill:#222829;" width="13" height="2"/>
+			</g>
+		</g>
+		<g>
+			<rect x="33" y="54" style="fill:#222829;" width="2" height="9"/>
+		</g>
+		<g>
+			<rect x="17" y="58" style="fill:#222829;" width="2" height="5"/>
+		</g>
+		<g>
+			<rect x="13" y="54" style="fill:#222829;" width="2" height="9"/>
+		</g>
+		<g>
+			<rect x="37" y="60" style="fill:#222829;" width="2" height="3"/>
+		</g>
+		<g>
+			<rect x="9" y="60" style="fill:#222829;" width="2" height="3"/>
+		</g>
+	</g>
+</g>
+</svg>
