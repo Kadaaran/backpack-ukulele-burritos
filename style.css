@@ -51,20 +51,19 @@ header {
   justify-content: space-between;
   align-content: stretch;
   align-items: flex-start;
-  margin-bottom: 10px;
   padding-bottom: 15px;
-  background-color: rgba(0, 0, 0, 0.06);
+  padding-top: 20px;
   height: 50px;
+  margin: 0 20 20 0;
 }
 
 header a {
-  padding: 20px 20px 0;
-  text-decoration: none;
-  display: inline-block;
-  color: white;
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
-  font-weight: 300;
-
+  padding: 20px 20px 0 30px;
+   text-decoration: none;
+   display: inline-block;
+   color: white;
+   font-weight: 300;
+   font-size: 18px;
 }
 
 header .nav {
@@ -148,7 +147,7 @@ header ul {
   padding: 40px;
 }
 .item img{
-  width: 800px;
+  width: 670px;
 }
 
 /*#about h2 {
