@@ -4,6 +4,9 @@
   "description": "I dunno yet",
   "main": "server.js",
   "author": "Kass",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.13.4",
     "fluxible": "^1.1.0",
