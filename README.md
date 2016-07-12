@@ -12,9 +12,10 @@
 <p align="center">Come back later guys !</p>  
 
 ---
+###TODO  
 
-* (Add button http://tympanus.net/Development/DistortedButtonEffects/)  
-* Add node server
-* Add the map
+* ~~Add node server~~
+* ~~Add the map~~
+* Choose countries/cities & add to list
 * Login/Register/Logout
 
