@@ -50,7 +50,6 @@
           markers.forEach(function(marker) {
             marker.setMap(null);
           });
-
           markers = [];
 
           // For each place, get the icon, name and location.
@@ -82,7 +81,6 @@
           map.fitBounds(bounds, places);
           map.setZoom(9);
         });
-
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdhSy9IOyFcx_nVQ2P-WBpAOJasdas-y4&libraries=places&callback=initialize"></script>
