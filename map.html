@@ -51,6 +51,7 @@
           markers.forEach(function(marker) {
             marker.setMap(null);
           });
+
           markers = [];
 
           // For each place, get the icon, name and location.
@@ -69,7 +70,7 @@
               map: map,
               icon: icon,
               title: place.name,
-              position: place.geometry.location
+              position: place.geometry.location,
             }));
 
             if (place.geometry.viewport) {
@@ -79,7 +80,8 @@
               bounds.extend(place.geometry.location);
             }
           });
-          map.fitBounds(bounds);
+          map.fitBounds(bounds, places);
+          map.setZoom(9);
         });
 
       }
