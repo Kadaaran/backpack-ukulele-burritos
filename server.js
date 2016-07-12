@@ -6,11 +6,11 @@ app.use("/svg", express.static(__dirname + '/svg'));
 app.use("/img", express.static(__dirname + '/img'));
 
 app.get('/', function(req, res){
-  res.sendfile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/map.html', function(req, res){
-  res.sendfile(__dirname + '/map.html');
+  res.sendFile(__dirname + '/map.html');
 });
 
 app.listen(3000, function() {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backpack & Ukulele & Burritos</title>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/styles/map.css">
+    <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Lato:100,200,400,700">
+  </head>
+
+    <body>
+      <div id="map"></div>
+      <div class="search"></div>
+
+      <script>
+        function initialize() {
+
+          // Create an array of styles.
+          var styles = [{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]},{"stylers":[{"saturation":-17},{"gamma":0.36}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#3f518c"}]}];
+
+          var styledMap = new google.maps.StyledMapType(styles,
+            {name: "Styled Map"});
+
+          var mapOptions = {
+            center: {lat: 38.7222524, lng: -9.139337},
+            zoom: 4,
+            mapTypeControlOptions: {
+              mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+            }
+          };
+
+          var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+          //Associate the styled map with the MapTypeId and set it to display.
+          map.mapTypes.set('map_style', styledMap);
+          map.setMapTypeId('map_style');
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdhSy9IOyFcx_nVQ2P-WBpAOJasdas-y4&callback=initialize"></script>
+    </body>
+
+</html>
