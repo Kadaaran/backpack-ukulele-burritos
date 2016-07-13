@@ -13,8 +13,5 @@
 
 ---
 
-* (Add button http://tympanus.net/Development/DistortedButtonEffects/)  
-* Add node server
-* Add the map
-* Login/Register/Logout
+
 
