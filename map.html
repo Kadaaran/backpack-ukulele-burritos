@@ -51,7 +51,6 @@
           if (places.length == 0) {
             return;
           }
-          // console.log("places: ", places);
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
@@ -77,12 +76,13 @@
                   position: place.geometry.location,
                   name: place.name
                 })
+                //push data to li
                 var name = place.formatted_address;
                 $(".places ul").append("<li>" + name + "</li>");
 
                 //event onclick
                 google.maps.event.addListener(marker, 'click', function() {
-                  infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '</div>');
+                  infowindow.setContent('<div><strong>' + name + '</strong><br>' + '</div>');
                   infowindow.open(map, this);
                 });
               }
@@ -104,6 +104,7 @@
           });
           map.fitBounds(bounds, places);
         });
+
       }
     </script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>

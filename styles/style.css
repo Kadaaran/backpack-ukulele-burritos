@@ -156,6 +156,30 @@ header ul {
   font-weight: 300;
 }*/
 
-footer {
+
+#get-started {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #4e5c65;
+  padding: 100px 0 100px;
+
+}
+
+#get-started button {
+  padding: 30px 50px;
+  background-color: transparent;
+  border: 2px white solid;
+  color: white;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+#get-started button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#get-started a {
+  cursor: pointer;
 }
