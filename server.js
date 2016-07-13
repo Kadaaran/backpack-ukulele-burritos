@@ -4,6 +4,8 @@ var app = express();
 app.use("/styles", express.static(__dirname + '/styles'));
 app.use("/svg", express.static(__dirname + '/svg'));
 app.use("/img", express.static(__dirname + '/img'));
+app.use("/src", express.static(__dirname + '/src'));
+
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');

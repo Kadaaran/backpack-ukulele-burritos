@@ -16,9 +16,10 @@
       </div>
     <script>
       function initialize() {
+        //init map style
         var styles = [{"featureType":"all","elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]}];
         var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
-
+        //init center of the map
         var mapOptions = {
           center: {lat: 38.7222524, lng: -9.139337},
           zoom: 4,
@@ -27,6 +28,7 @@
           }
         };
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        //set map styled and classic
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
 
@@ -34,8 +36,6 @@
         var input = document.getElementById('search-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
           searchBox.setBounds(map.getBounds());
         });
@@ -45,35 +45,44 @@
         // more details for that place.
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
-
           if (places.length == 0) {
             return;
           }
+          // console.log("places: ", places);
+          console.log("markers: ", markers);
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
             marker.setMap(null);
           });
+
           markers = [];
 
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
+          places.forEach(function(place){
+            var infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
 
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location,
-            }));
+            //set markers and get name
+            service.getDetails({
+              placeId: place.place_id
+            }, function(place, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                //init marker per place
+                var marker = new google.maps.Marker({
+                  map: map,
+                  position: place.geometry.location,
+                  name: place.name
+                })
+                console.log(marker.name);
+                //event onclick
+                google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '</div>');
+                  infowindow.open(map, this);
+                });
+              }
+            });
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
@@ -82,9 +91,23 @@
               bounds.extend(place.geometry.location);
             }
           });
+
           map.fitBounds(bounds, places);
-          map.setZoom(9);
+          //check types
+          if (places[0].address_components[0].types[0] === 'locality') {
+            map.setZoom(9);
+          }
+          if (places[0].address_components[0].types[0] === 'country'){
+            map.setZoom(6);
+          }
+          if (places[0].address_components[0].types[0] === 'route') {
+            map.setZoom(13);
+          } else {
+            map.setZoom(8);
+          }
         });
+        console.log(markers);
+
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdhSy9IOyFcx_nVQ2P-WBpAOJasdas-y4&libraries=places&callback=initialize"></script>
