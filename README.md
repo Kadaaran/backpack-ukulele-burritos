@@ -17,7 +17,10 @@
 * ~~Add node server~~
 * ~~Add the map~~
 * ~~Add search bar~~
-* ~~change colors~~
+* ~~change colors~~  
+
+* Create array of all the  markers
+* Display/hide/remove markers  
 * Choose countries/cities & add to list
 * Login/Register/Logout
 
