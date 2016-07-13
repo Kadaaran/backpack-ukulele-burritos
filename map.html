@@ -5,6 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/styles/map.css">
     <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Lato:100,200,400,700">
+
   </head>
 
   <body>
@@ -12,7 +13,9 @@
       <div id="map"></div>
       <div class="places">
         <h3>Places</h3>
-        <li>coucoucouuuuuuu</li>
+        <ul>
+
+        </ul>
       </div>
     <script>
       function initialize() {
@@ -75,7 +78,9 @@
                   position: place.geometry.location,
                   name: place.name
                 })
-                console.log(marker.name);
+                var name = place.formatted_address;
+                $(".places ul").append("<li>" + name + "</li>");
+
                 //event onclick
                 google.maps.event.addListener(marker, 'click', function() {
                   infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '</div>');
@@ -106,10 +111,9 @@
             map.setZoom(8);
           }
         });
-        console.log(markers);
-
       }
     </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdhSy9IOyFcx_nVQ2P-WBpAOJasdas-y4&libraries=places&callback=initialize"></script>
   </body>
 
