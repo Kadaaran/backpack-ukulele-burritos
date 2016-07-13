@@ -52,7 +52,6 @@
             return;
           }
           // console.log("places: ", places);
-          console.log("markers: ", markers);
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
@@ -97,19 +96,13 @@
             }
           });
 
+          //set relevant zoom
+          google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+            if (this.getZoom() > 15) {
+              this.setZoom(15);
+            }
+          });
           map.fitBounds(bounds, places);
-          //check types
-          if (places[0].address_components[0].types[0] === 'locality') {
-            map.setZoom(9);
-          }
-          if (places[0].address_components[0].types[0] === 'country'){
-            map.setZoom(6);
-          }
-          if (places[0].address_components[0].types[0] === 'route') {
-            map.setZoom(13);
-          } else {
-            map.setZoom(8);
-          }
         });
       }
     </script>
