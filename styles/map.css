@@ -66,7 +66,7 @@ body {
 }
 
 .places {
-  background-color: rgba(0, 17, 53, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 100%;
   right: 0px;
@@ -85,6 +85,8 @@ h3 {
 }
 
 .places li {
+  padding: 5px;
+  font-size: 1.1em;
   font-family: "Lato";
   font-weight: 300;
   color: white;
