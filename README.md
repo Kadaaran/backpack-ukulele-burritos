@@ -19,8 +19,8 @@
 * ~~Add search bar~~
 * ~~change colors~~  
 * ~~Choose countries/cities & add to list~~  
+* ~~Create array of all the  markers~~
+* ~~Display~~/hide/~~remove markers~~  
 
-* Create array of all the  markers
-* Display/hide/remove markers  
 * Login/Register/Logout
 
